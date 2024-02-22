@@ -15,7 +15,14 @@ function App() {
                 <div>
                     <p className="">Converter</p>
                     <Form onDataUpdate={handleDataUpdate} />
-                    <p>{data.data.result}</p>
+                    {data ? (
+                        <>
+                            <p>
+                                {data.data.query.amount} {data.data.query.from}{" "}
+                                = {data.data.result} {data.data.query.to}
+                            </p>
+                        </>
+                    ) : null}
                 </div>
             </div>
         </>
