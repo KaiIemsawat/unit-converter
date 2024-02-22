@@ -15,7 +15,7 @@ function App() {
                 <div>
                     <p className="">Converter</p>
                     <Form onDataUpdate={handleDataUpdate} />
-                    {data ? (
+                    {data.data ? (
                         <>
                             <p>
                                 {data.data.query.amount} {data.data.query.from}{" "}
